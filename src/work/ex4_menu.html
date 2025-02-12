@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MENU : BANTITA</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Mali:regular);
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      font-family: Mali;
+    }
+    body {
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px 20px 20px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    h2 {
+      text-align: center;
+      text-decoration: underline #a1b0c7;
+    }
+    h3 {
+      background-color: #dfeefd;
+    }
+    .p {
+      margin: 0 10px 0 10px; /*บน ขวา ล่าง ซ้าย*/
+    }
+    .img {
+      /* width: 350px; */
+      height: auto;
+      width: 40%;
+      margin: 10px auto;
+    }
+    .imgh {
+      height: auto;
+      width: 100%;
+    }
+    ol > li {
+      font-weight: bold;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 20px 0px 20px;
+    }
+
+    .nutrition-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .nutrition-table th,
+    .nutrition-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    .nutrition-table th {
+      background-color: #fecde0;
+      color: #333;
+      text-align: center;
+    }
+    .highlight {
+      background-color: #ffdef1;
+    }
+    .separator {
+      width: 100%; /* ทำให้เส้นคั่นกว้างเต็มพื้นที่ */
+      height: 2px;
+      background-color: #faefd9;
+      margin: 10px auto;
+    }
+    .foot {
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px 20px 20px 20px;
+    }
+    .pt {
+      font-weight: bold;
+      color: #000000;
+    }
+    .a {
+      color: #000000;
+      text-decoration: none;
+      margin: 0 40px 0 0;
+    }
+    .a:hover {
+      color: #8ba7e4;
+      background-color: #fdffd1;
+      font-weight: bold;
+    }
+    .link {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .link:hover {
+      color: #e059a1;
+      font-weight: bold;
+    }
+    .link2 {
+      color: #000000;
+      text-decoration: none;
+    }
+    .link2:hover {
+      color: #a859e0;
+    }
+    form {
+      background: #d9faec;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px 20px 20px 20px;
+    }
+    label {
+      font-weight: bold;
+      color: black;
+    }
+    .container {
+      display: flex;
+      gap: 20px; /* ระยะห่างระหว่างคอลัมน์ */
+      padding: 20px;
+    }
+    .column {
+      flex: 1; /* ทำให้คอลัมน์มีขนาดเท่ากัน */
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+    .column:nth-child(1) {
+      padding: 10px 0px 10px 20px;
+    }
+    .column:nth-child(2) {
+      background-color: #ffe4f2; /* สีพื้นหลังสำหรับคอลัมน์ที่สอง */
+      padding: 5%;
+    }
+    .inputtex {
+      width: 100%;
+      margin: 20px auto;
+      border: 2px solid #a8ceb8;
+      border-radius: 5px;
+      background-color: #f4f7f9;
+    }
+    .button {
+      padding: 10px 20px 10px 20px;
+      border-radius: 15px;
+      border: none;
+      background-color: #8eb79f;
+      color: #ffffff;
+    }
+  </style>
+  <body>
+    <center>
+      <img src="/src/images/pic12.png" alt="" class="imgh" />
+      <img src="/src/images/pic2.png" alt="macaron1" class="img" />
+      <img src="/src/images/pic3.png" alt="macaron2" class="img" />
+    </center>
+    <div class="container">
+      <div class="column">
+        <p class="pt"><i class="material-icons">favorite</i>ทางลัด</p>
+        <nav>
+          <ol>
+            <li>
+              <a href="#ingredients" class="link">ส่วนผสม (Ingredients)</a>
+            </li>
+            <li>
+              <a href="#method" class="link">ขั้นตอนการทำ (Method)</a>
+              <ul>
+                <li>
+                  <a href="#step1" class="link2"
+                    >STEP 1: ขั้นตอนการทำเปลือกมาการอง</a
+                  >
+                </li>
+                <li>
+                  <a href="#step2" class="link2">STEP 2: ขั้นตอนการทำไส้</a>
+                </li>
+                <li>
+                  <a href="#step3" class="link2">STEP 3: ประกอบมาการอง</a>
+                </li>
+                <li><a href="#tips" class="link2">เคล็ดลับสำหรับมาการอง</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#nutrition" class="link"
+                >ตารางโภชนาการ (Nutrition Facts)</a
+              >
+            </li>
+            <li><a href="#comments" class="link">Comment</a></li>
+          </ol>
+        </nav>
+      </div>
+      <div class="column">
+        <p class="p">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          มาการองเป็นขนมหวานที่ได้จากการผสมเมอแร็งก์กับไข่ขาว, น้ำตาลไอซิ่ง,
+          น้ำตาลทรายขาว, ผงแอลมอนด์หรือแอลมอนด์ป่น และสีผสมอาหาร
+          มาการงรูปร่างเหมือนแซนด์วิช เป็นขนมปังสองชิ้นประกบกัน มีสอดไส้ตรงกลาง
+          ส่วนไส้มักจะเป็นกานัช, บัตเตอร์ครีม (ครีมเนยที่ใช้แต่งหน้าเค้ก)
+          หรือแยม คำว่า มาการง แผลงมาจากคำในภาษาอิตาลีว่า macarone, maccarone
+          หรือ maccherone, เมอแร็งก์แบบอิตาลี
+          <i class="material-icons">restaurant</i>
+        </p>
+      </div>
+    </div>
+    <h2 id="ingredients">ส่วนผสม (Ingredients)</h2>
+    <ul>
+      สำหรับ 15-20 ชิ้น
+    </ul>
+    <ul>
+      เวลาที่ใช้ในการทำ 2 ชั่วโมง
+      <i class="material-icons">browse_gallery</i>
+    </ul>
+    <h3 id="method">ส่วนผสมสำหรับเปลือกมาการอง (Macaron Shell)</h3>
+    <ul>
+      <li>อัลมอนด์ป่น 110 กรัม</li>
+      <li>น้ำตาลไอซิ่ง 90 กรัม</li>
+      <li>ไข่ขาว(ที่แยกเตรียมไว้ 3-5 วัน) 75 กรัม</li>
+      <li>น้ำตาลทรายเกร็ดละเอียด 40 กรัม</li>
+      <li>สีผสมอาหาร (ตามชอบ): 1-2 หยด</li>
+    </ul>
+    <h3>ส่วนผสมสำหรับไส้ (Buttercream)</h3>
+    <ul>
+      <li>เนยจืด (อุณหภูมิห้อง): 100 กรัม</li>
+      <li>น้ำตาลไอซิ่ง: 50 กรัม</li>
+      <li>กลิ่นวานิลลา (หรือรสชาติอื่นๆ): 1 ช้อนชา</li>
+    </ul>
+    <div class="separator"></div>
+    <br />
+    <h2>ขั้นตอนการทำ (Method)</h2>
+    <h3 id="step1">STEP 1 : ขั้นตอนการทำเปลือกมาการอง</h3>
+    <ol>
+      <li>เตรียมวัตถุดิบ</li>
+      <ul>
+        <li>
+          ร่อนน้ำตาลไอซิ่งและอัลมอนด์ป่นเข้าด้วยกัน 2-3 รอบ
+          เพื่อให้ส่วนผสมละเอียดและไม่มีเม็ดหยาบ
+        </li>
+        <li>แยกไข่ขาวออกจากไข่แดง แล้วนำไข่ขาวใส่ชามผสม</li>
+      </ul>
+      <li>ตีไข่ขาว</li>
+      <ul>
+        <li>ใช้เครื่องตีไฟฟ้าตีไข่ขาวจนขึ้นฟองหยาบ</li>
+        <li>ทยอยใส่น้ำตาลทรายละเอียดทีละน้อยจนหมด</li>
+        <li>ตีต่อจนไข่ขาวตั้งยอดแข็ง (เวลายกหัวตีแล้วจะมีปลายแหลมเล็กน้อย)</li>
+      </ul>
+      <li>ผสมสี</li>
+      <ul>
+        <li>ใส่สีผสมอาหารลงในไข่ขาว ตีให้เข้ากันจนได้สีที่ต้องการ</li>
+      </ul>
+      <li>ผสมส่วนแห้งกับไข่ขาว</li>
+      <ul>
+        <li>ค่อยๆ ใส่ส่วนผสมอัลมอนด์ป่นและน้ำตาลไอซิ่งลงในไข่ขาว</li>
+        <li>
+          ใช้พายยางตะล่อมเบาๆ ด้วยการตักวนรอบอ่างและตัดตรงกลาง
+          ทำจนส่วนผสมเนียนเป็นเนื้อเดียวกัน
+        </li>
+        <li>
+          ตรวจสอบความหนืด: ส่วนผสมควรไหลเป็นริบบิ้นอย่างต่อเนื่องเมื่อยกพายขึ้น
+        </li>
+      </ul>
+      <li>บีบแป้งมาการอง</li>
+      <ul>
+        <li>ใส่ส่วนผสมลงในถุงบีบพร้อมหัวบีบกลมขนาดเล็ก</li>
+        <li>บีบลงบนกระดาษรองอบให้เป็นวงขนาดประมาณ 3 ซม.</li>
+        <li>เคาะถาดเบาๆ 2-3 ครั้งเพื่อไล่ฟองอากาศ</li>
+        <img src="/src/images/pic9.png" alt="" class="img" />
+        <img src="/src/images/pic5.png" alt="" class="img" />
+      </ul>
+      <li>พักแป้ง</li>
+      <ul>
+        <li>
+          พักแป้งไว้ที่อุณหภูมิห้องประมาณ 30-60 นาที จนหน้ามาการองแห้ง (แตะเบาๆ
+          แล้วไม่ติดนิ้ว)
+        </li>
+      </ul>
+      <li>อบเปลือกมาการอง</li>
+      <ul>
+        <li>อุ่นเตาอบที่อุณหภูมิ 150°C</li>
+        <li>อบมาการองประมาณ 12-15 นาที</li>
+        <li>หลังอบเสร็จ ให้พักจนเย็นสนิทก่อนนำออกจากกระดาษรองอบ</li>
+        <img src="/src/images/pic6.png" alt="" class="img" />
+        <img src="/src/images/pic8.png" alt="" class="img" />
+      </ul>
+    </ol>
+    <div class="separator"></div>
+    <br />
+    <h3 id="step2">STEP 2 : ขั้นตอนการทำไส้</h3>
+    <ol>
+      <li>ไส้บัตเตอร์ครีม (Buttercream)</li>
+      <ul>
+        <li>ตีเนยจืดด้วยเครื่องตีไฟฟ้าจนฟูและสีอ่อนลง</li>
+        <li>ทยอยใส่น้ำตาลไอซิ่งทีละน้อย ตีจนเนียน</li>
+        <li>เติมกลิ่นวานิลลาหรือรสชาติที่ชอบ ตีต่อจนเข้ากัน</li>
+        <img src="/src/images/pic7.png" alt="" class="img" />
+        <img src="/src/images/pic10.png" alt="" class="img" />
+      </ul>
+    </ol>
+    <div class="separator"></div>
+    <br />
+    <h3 id="step3">STEP 3 : ประกอบมาการอง</h3>
+    <ol>
+      <ul>
+        <li>จับเปลือกมาการองที่ขนาดใกล้เคียงกันเป็นคู่</li>
+        <li>บีบไส้ตรงกลางของเปลือกมาการองชิ้นหนึ่ง แล้วประกบด้วยอีกชิ้น</li>
+        <li>กดเบาๆ ให้ไส้กระจายสม่ำเสมอ</li>
+        <img src="/src/images/pic11.png" alt="" class="img" />
+        <img src="/src/images/pic4.png" alt="" class="img" />
+      </ul>
+    </ol>
+    <div class="separator"></div>
+    <br />
+    <h2 id="tips">เคล็ดลับสำหรับมาการอง</h2>
+    <ul class="foot">
+      <li>ใช้อัลมอนด์ป่นที่แห้งสนิท เพื่อป้องกันเปลือกแตก</li>
+      <li>หากเปลือกมาการองแตกในเตาอบ อาจเกิดจากการพักแป้งไม่เพียงพอ</li>
+      <li>
+        พักมาการองในตู้เย็นประมาณ 1 วันก่อนรับประทาน
+        เพื่อให้เปลือกและไส้ซึมเข้ากัน
+      </li>
+    </ul>
+    <br />
+    <div class="separator"></div>
+    <br />
+    <h2 id="nutrition">ตารางโภชนาการ (Nutrition Facts)</h2>
+    <h3>ข้อมูลโภชนาการ</h3>
+    <table class="nutrition-table">
+      <thead>
+        <tr>
+          <th>ส่วนประกอบ</th>
+          <th>ปริมาณ</th>
+          <th>พลังงาน</th>
+          <th>โปรตีน</th>
+          <th>ไขมัน</th>
+          <th>คาร์โบไฮเดรต</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ไข่ขาว</td>
+          <td>65 กรัม</td>
+          <td>30 กิโลแคลอรี</td>
+          <td>7 กรัม</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr class="highlight">
+          <td>น้ำตาลทราย</td>
+          <td>200 กรัม</td>
+          <td>800 กิโลแคลอรี</td>
+          <td>-</td>
+          <td>-</td>
+          <td>200 กรัม</td>
+        </tr>
+        <tr>
+          <td>อัลมอนด์ป่น</td>
+          <td>300 กรัม</td>
+          <td>1800 กิโลแคลอรี</td>
+          <td>60 กรัม</td>
+          <td>150 กรัม</td>
+          <td>60 กรัม</td>
+        </tr>
+        <tr class="highlight">
+          <td>เนยจืด</td>
+          <td>100 กรัม</td>
+          <td>720 กิโลแคลอรี</td>
+          <td>1 กรัม</td>
+          <td>80 กรัม</td>
+          <td>1 กรัม</td>
+        </tr>
+        <tr>
+          <td>น้ำตาลไอซิ่ง</td>
+          <td>50 กรัม</td>
+          <td>200 กิโลแคลอรี</td>
+          <td>-</td>
+          <td>-</td>
+          <td>50 กรัม</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">รวม</th>
+          <th>2,550 กิโลแคลอรี</th>
+          <th>68 กรัม</th>
+          <th>230 กรัม</th>
+          <th>311 กรัม</th>
+        </tr>
+      </tfoot>
+    </table>
+    <p style="color: rgb(200, 0, 0)">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หมายเหตุ : ข้อมูลทางโภชนาการเป็นค่าประมาณ
+      อาจมีการเปลี่ยนแปลงขึ้นอยู่กับปริมาณและชนิดของวัตถุดิบที่ใช้
+    </p>
+    <br />
+    <div class="separator"></div>
+
+    <p class="pt">แหล่งที่มา</p>
+    <a
+      href="https://www.sgethai.com/article/%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%87-%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%9D/?srsltid=AfmBOorugEgtnvQAc7qL3OejIFq5c9x8LhLSQ7VI88_5vq0oZNd5rVNp"
+      class="a"
+      >sgethai.com</a
+    >
+    <a
+      href="https://www.calforlife.com/th/calories/mothers-macaroon-cookies"
+      class="a"
+      >calforlife.com</a
+    >
+    <a
+      href="https://macaroonworld.com/%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%87-%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B9%81%E0%B8%84%E0%B8%A5/"
+      class="a"
+      >macaroonworld.com</a
+    >
+    <br />
+    <div class="separator"></div>
+    <br />
+    <form>
+      <h2 id="comments">Comment</h2>
+      <label for="">Topics : </label><br />
+      <input
+        type="text"
+        name="topics"
+        id="topics"
+        placeholder="topics"
+        class="inputtex"
+      />
+      <label for="">Comment : </label><br />
+      <input
+        type="text"
+        name="comment"
+        id="comment"
+        placeholder="comment"
+        class="inputtex"
+      />
+      <input type="reset" value="Clear" class="button" />
+      <input type="submit" value="Submit" class="button" />
+    </form>
+  </body>
+</html>

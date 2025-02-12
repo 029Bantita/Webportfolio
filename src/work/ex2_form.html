@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGISTER</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Alumni Registration Form</h1>
+    <h2 style="text-align: center">แบบฟอร์มลงทะเบียนศิษย์เก่า</h2>
+    <br />
+    <form>
+      <table>
+        <tr>
+          <td><label for="name">ชื่อ - นามสกุล</label></td>
+          <td>
+            <input
+              type="text"
+              name="name"
+              size="10"
+              placeholder="ชื่อ"
+              required
+            />
+            <input
+              type="text"
+              name="lname"
+              size="14"
+              placeholder="นามสกุล"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pass">รหัสนักศึกษา</label></td>
+          <td>
+            <input
+              type="text"
+              name="pass"
+              size="30"
+              maxlength="10"
+              placeholder="รหัสนักศึกษา"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="gender">เพศ</label></td>
+          <td>
+            <input type="radio" name="gender" value="0" required />หญิง
+            <input type="radio" name="gender" value="1" required />ชาย
+            <input type="radio" name="gender" value="2" required />LGBTQ+
+          </td>
+          <!-- <td><input type="radio" name="gender" value="1" />ชาย</td> -->
+        </tr>
+        <tr>
+          <td><label for="year">ปีการศึกษาเข้าศึกษา</label></td>
+          <td><input type="date" name="year" required /></td>
+        </tr>
+        <tr>
+          <td><label for="address">ที่อยู่</label></td>
+          <td>
+            <input
+              type="text"
+              name="address"
+              size="30"
+              placeholder="เลขที่ ซอย ถนน"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="address1">‎</label></td>
+          <td>
+            <input
+              type="text"
+              name="address1"
+              size="10"
+              placeholder="แขวง/ตำบล"
+              required
+            />
+            <input
+              type="text"
+              name="address1"
+              size="14"
+              placeholder="เขต/อำเภอ"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="address2">‎</label></td>
+          <td>
+            <select style="width: 142px" id="province" name="province" required>
+              <option style="text-align: center" value="" disabled selected>
+                - กรุณาเลือกจังหวัด -
+              </option>
+              <option value="bangkok">กรุงเทพมหานคร</option>
+              <option value="amnat_charoen">อำนาจเจริญ</option>
+              <option value="ang_thong">อ่างทอง</option>
+              <option value="bueng_kan">บึงกาฬ</option>
+              <option value="buriram">บุรีรัมย์</option>
+              <option value="chachoengsao">ฉะเชิงเทรา</option>
+              <option value="chainat">ชัยนาท</option>
+              <option value="chaiyaphum">ชัยภูมิ</option>
+              <option value="chanthaburi">จันทบุรี</option>
+              <option value="chiang_mai">เชียงใหม่</option>
+              <option value="chiang_rai">เชียงราย</option>
+              <option value="chonburi">ชลบุรี</option>
+              <option value="chumphon">ชุมพร</option>
+              <option value="kalasin">กาฬสินธุ์</option>
+              <option value="kamphaeng_phet">กำแพงเพชร</option>
+              <option value="kanchanaburi">กาญจนบุรี</option>
+              <option value="khon_kaen">ขอนแก่น</option>
+              <option value="krabi">กระบี่</option>
+              <option value="lampang">ลำปาง</option>
+              <option value="lamphun">ลำพูน</option>
+              <option value="loei">เลย</option>
+              <option value="lopburi">ลพบุรี</option>
+              <option value="maha_sarakham">มหาสารคาม</option>
+              <option value="mae_hong_son">แม่ฮ่องสอน</option>
+              <option value="nakhon_nayok">นครนายก</option>
+              <option value="nakhon_pathom">นครปฐม</option>
+              <option value="nakhon_phanom">นครพนม</option>
+              <option value="nakhon_ratchasima">นครราชสีมา</option>
+              <option value="nakhon_si_thammarat">นครศรีธรรมราช</option>
+              <option value="nan">น่าน</option>
+              <option value="narathiwat">นราธิวาส</option>
+              <option value="nong_bua_lamphu">หนองบัวลำภู</option>
+              <option value="nong_khai">หนองคาย</option>
+              <option value="nonthaburi">นนทบุรี</option>
+              <option value="pathum_thani">ปทุมธานี</option>
+              <option value="pattani">ปัตตานี</option>
+              <option value="phang_nga">พังงา</option>
+              <option value="phatthalung">พัทลุง</option>
+              <option value="phayao">พะเยา</option>
+              <option value="phetchabun">เพชรบูรณ์</option>
+              <option value="phetchaburi">เพชรบุรี</option>
+              <option value="phichit">พิจิตร</option>
+              <option value="phitsanulok">พิษณุโลก</option>
+              <option value="phrae">แพร่</option>
+              <option value="phuket">ภูเก็ต</option>
+              <option value="prachinburi">ปราจีนบุรี</option>
+              <option value="prachuap_khiri_khan">ประจวบคีรีขันธ์</option>
+              <option value="ranong">ระนอง</option>
+              <option value="ratchaburi">ราชบุรี</option>
+              <option value="rayong">ระยอง</option>
+              <option value="roi_et">ร้อยเอ็ด</option>
+              <option value="sa_kaeo">สระแก้ว</option>
+              <option value="sakon_nakhon">สกลนคร</option>
+              <option value="samut_prakan">สมุทรปราการ</option>
+              <option value="samut_sakhon">สมุทรสาคร</option>
+              <option value="samut_songkhram">สมุทรสงคราม</option>
+              <option value="saraburi">สระบุรี</option>
+              <option value="satun">สตูล</option>
+              <option value="sing_buri">สิงห์บุรี</option>
+              <option value="sisaket">ศรีสะเกษ</option>
+              <option value="songkhla">สงขลา</option>
+              <option value="sukhothai">สุโขทัย</option>
+              <option value="suphanburi">สุพรรณบุรี</option>
+              <option value="surat_thani">สุราษฎร์ธานี</option>
+              <option value="surin">สุรินทร์</option>
+              <option value="tak">ตาก</option>
+              <option value="trang">ตรัง</option>
+              <option value="trat">ตราด</option>
+              <option value="ubon_ratchathani">อุบลราชธานี</option>
+              <option value="udon_thani">อุดรธานี</option>
+              <option value="uttaradit">อุตรดิตถ์</option>
+              <option value="yala">ยะลา</option>
+              <option value="yasothon">ยโสธร</option>
+            </select>
+            <input
+              type="text"
+              name="address2"
+              size="8"
+              placeholder="รหัสไปรษณีย์"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="eml">อีเมล</label></td>
+          <td>
+            <input
+              type="email"
+              name="eml"
+              size="30"
+              placeholder="กรอกอีเมล"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="phone">เบอร์โทรติดต่อ</label></td>
+          <td>
+            <input
+              type="text"
+              name="phone"
+              size="30"
+              maxlength="10"
+              placeholder="กรอกเฉพาะตัวเลข"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="majer">ชื่อหลักสูตร</label></td>
+          <td>
+            <select name="majer" id="majer" required>
+              <option style="text-align: center" value="" disabled selected>
+                - - กรุณาเลือกหลักสูตร - -
+              </option>
+              <option value="it">IT (Information Technology)</option>
+              <option value="is">IS (Information Systems)</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="job">อาชีพปัจจุบัน</label></td>
+          <td>
+            <input
+              type="text"
+              name="name"
+              size="30"
+              placeholder="กรอกอาชีพปัจจุบัน"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="typ">ประเภทงาน</label></td>
+          <td>
+            <select name="่job" id="job" required>
+              <op tion style="text-align: center" value="" disabled selected>
+                - - กรุณาเลือกประเภทงาน - -
+              </option>
+              <option value="programmer">โปรแกรมเมอร์ (Programmer)</option>
+              <option value="deve">Web Developer</option>
+              <option value="tester">Software Tester</option>
+              <option value="analyst">System Analyst</option>
+              <option value="architect">Software Architect</option>
+              <option value="network">Network System Designer</option>
+              <option value="engineer">Network System Engineer</option>
+              <option value="administrator">
+                Network System Administrator
+              </option>
+              <option value="game">Game Developer</option>
+              <option value="web">Web Designer/Developer</option>
+              <option value="ui-ux">UI/UX Designer</option>
+              <option value="digital">Digital Media Content Creator</option>
+              <option value="it-security">IT Security Analyst</option>
+              <option value="seo">Search Engine Optimization</option>
+              <option value="database">Database Developer</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="adresjob">สถานทีทำงาน</label></td>
+          <td>
+            <input
+              type="text"
+              name="compname"
+              size="30"
+              placeholder="ชื่อบริษัท"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="adresjob2">‎</label></td>
+          <td>
+            <input
+              type="text"
+              name="compname"
+              size="30"
+              placeholder="เลขที่ ซอย ถนน"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="adresjob2">‎</label></td>
+          <td>
+            <input
+              type="text"
+              name="compname"
+              size="10"
+              placeholder="แขวง/ตำบล"
+              required
+            />
+            <input
+              type="text"
+              name="compname"
+              size="14"
+              placeholder="เขต/อำเภอ"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="adresjob2">‎</label></td>
+          <td>
+            <select
+              style="width: 142px"
+              id="province2"
+              name="province2"
+              required
+            >
+              <option style="text-align: center" value="" disabled selected>
+                - กรุณาเลือกจังหวัด -
+              </option>
+              <option value="bangkok">กรุงเทพมหานคร</option>
+              <option value="amnat_charoen">อำนาจเจริญ</option>
+              <option value="ang_thong">อ่างทอง</option>
+              <option value="bueng_kan">บึงกาฬ</option>
+              <option value="buriram">บุรีรัมย์</option>
+              <option value="chachoengsao">ฉะเชิงเทรา</option>
+              <option value="chainat">ชัยนาท</option>
+              <option value="chaiyaphum">ชัยภูมิ</option>
+              <option value="chanthaburi">จันทบุรี</option>
+              <option value="chiang_mai">เชียงใหม่</option>
+              <option value="chiang_rai">เชียงราย</option>
+              <option value="chonburi">ชลบุรี</option>
+              <option value="chumphon">ชุมพร</option>
+              <option value="kalasin">กาฬสินธุ์</option>
+              <option value="kamphaeng_phet">กำแพงเพชร</option>
+              <option value="kanchanaburi">กาญจนบุรี</option>
+              <option value="khon_kaen">ขอนแก่น</option>
+              <option value="krabi">กระบี่</option>
+              <option value="lampang">ลำปาง</option>
+              <option value="lamphun">ลำพูน</option>
+              <option value="loei">เลย</option>
+              <option value="lopburi">ลพบุรี</option>
+              <option value="maha_sarakham">มหาสารคาม</option>
+              <option value="mae_hong_son">แม่ฮ่องสอน</option>
+              <option value="nakhon_nayok">นครนายก</option>
+              <option value="nakhon_pathom">นครปฐม</option>
+              <option value="nakhon_phanom">นครพนม</option>
+              <option value="nakhon_ratchasima">นครราชสีมา</option>
+              <option value="nakhon_si_thammarat">นครศรีธรรมราช</option>
+              <option value="nan">น่าน</option>
+              <option value="narathiwat">นราธิวาส</option>
+              <option value="nong_bua_lamphu">หนองบัวลำภู</option>
+              <option value="nong_khai">หนองคาย</option>
+              <option value="nonthaburi">นนทบุรี</option>
+              <option value="pathum_thani">ปทุมธานี</option>
+              <option value="pattani">ปัตตานี</option>
+              <option value="phang_nga">พังงา</option>
+              <option value="phatthalung">พัทลุง</option>
+              <option value="phayao">พะเยา</option>
+              <option value="phetchabun">เพชรบูรณ์</option>
+              <option value="phetchaburi">เพชรบุรี</option>
+              <option value="phichit">พิจิตร</option>
+              <option value="phitsanulok">พิษณุโลก</option>
+              <option value="phrae">แพร่</option>
+              <option value="phuket">ภูเก็ต</option>
+              <option value="prachinburi">ปราจีนบุรี</option>
+              <option value="prachuap_khiri_khan">ประจวบคีรีขันธ์</option>
+              <option value="ranong">ระนอง</option>
+              <option value="ratchaburi">ราชบุรี</option>
+              <option value="rayong">ระยอง</option>
+              <option value="roi_et">ร้อยเอ็ด</option>
+              <option value="sa_kaeo">สระแก้ว</option>
+              <option value="sakon_nakhon">สกลนคร</option>
+              <option value="samut_prakan">สมุทรปราการ</option>
+              <option value="samut_sakhon">สมุทรสาคร</option>
+              <option value="samut_songkhram">สมุทรสงคราม</option>
+              <option value="saraburi">สระบุรี</option>
+              <option value="satun">สตูล</option>
+              <option value="sing_buri">สิงห์บุรี</option>
+              <option value="sisaket">ศรีสะเกษ</option>
+              <option value="songkhla">สงขลา</option>
+              <option value="sukhothai">สุโขทัย</option>
+              <option value="suphanburi">สุพรรณบุรี</option>
+              <option value="surat_thani">สุราษฎร์ธานี</option>
+              <option value="surin">สุรินทร์</option>
+              <option value="tak">ตาก</option>
+              <option value="trang">ตรัง</option>
+              <option value="trat">ตราด</option>
+              <option value="ubon_ratchathani">อุบลราชธานี</option>
+              <option value="udon_thani">อุดรธานี</option>
+              <option value="uttaradit">อุตรดิตถ์</option>
+              <option value="yala">ยะลา</option>
+              <option value="yasothon">ยโสธร</option>
+            </select>
+            <input
+              type="text"
+              name="address2"
+              size="8"
+              placeholder="รหัสไปรษณีย์"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pic">Upload รูปถ่ายตนเอง 1 รูป</label></td>
+          <td><input type="file" name="pic" id="pic" /></td>
+        </tr>
+      </table>
+      <br />
+      <input
+        style="background-color: rgb(255, 157, 176)"
+        type="reset"
+        value="ล้างทั้งหมด"
+      />
+      <input
+        style="background-color: rgb(90, 208, 127)"
+        type="submit"
+        value="ส่งข้อมูล"
+      />
+      <!-- <style>
+        input[type="text"] {
+          background-color: rgb(236, 236, 236);
+          color: rgb(125, 125, 125);
+          border: 1px solid black;
+          padding: 5px;
+          border-radius: 5px;
+          font-size: 12px;
+          width: 250px;
+        }
+        input[type="email"] {
+          background-color: rgb(236, 236, 236);
+          color: rgb(159, 159, 159);
+          border: 1px solid black;
+          padding: 5px;
+          border-radius: 5px;
+          font-size: 12px;
+          width: 250px;
+        } -->
+      <!-- </style> -->
+    </form>
+  </body>
+</html>

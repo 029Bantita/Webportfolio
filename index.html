@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webprofile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="font-body bg-gray-900 text-white">
+    <!-- หัวเรื่อง -->
+    <div
+      class="flex justify-between pt-4 pb-4 items-center bg-gray-800 shadow-md gap-2"
+    >
+      <div class="flex items-center ml-5 gap-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="size-6 text-green-400"
+        >
+          <path
+            d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+          />
+        </svg>
+
+        <h1
+          class="text-2xl font-bold bg-gradient-to-r from-green-400 to-purple-400 text-transparent bg-clip-text"
+        >
+          Bantita's
+        </h1>
+      </div>
+      <!-- เมนู -->
+      <div>
+        <nav class="mr-5 font-semibold">
+          <!-- ปุ่ม Hamburger Menu (มือถือ) -->
+          <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6 hover:text-purple-400"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <!-- เมนูหลัก (แสดงบนหน้าจอใหญ่) -->
+          <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="flex gap-1 hover:text-green-400"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5"
+              >
+                <path
+                  d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
+                />
+                <path
+                  d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"
+                />
+              </svg>
+              Home</a
+            >
+            <a href="about.html" class="flex gap-1 hover:text-purple-400"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              About me</a
+            >
+            <a href="resume.html" class="flex gap-1 hover:text-pink-400"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 0 0-3.471 2.987 10.04 10.04 0 0 1 4.815 4.815 18.748 18.748 0 0 0 2.987-3.472l3.386-5.079A1.902 1.902 0 0 0 20.599 1.5Zm-8.3 14.025a18.76 18.76 0 0 0 1.896-1.207 8.026 8.026 0 0 0-4.513-4.513A18.75 18.75 0 0 0 8.475 11.7l-.278.5a5.26 5.26 0 0 1 3.601 3.602l.502-.278ZM6.75 13.5A3.75 3.75 0 0 0 3 17.25a1.5 1.5 0 0 1-1.601 1.497.75.75 0 0 0-.7 1.123 5.25 5.25 0 0 0 9.8-2.62 3.75 3.75 0 0 0-3.75-3.75Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Resume</a
+            >
+            <a href="contact.html" class="flex gap-1 hover:text-green-400"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Contact</a
+            >
+          </div>
+        </nav>
+        <!-- เมนูมือถือ (ซ่อนอยู่เริ่มต้น) -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden absolute top-16 right-5 bg-gray-800 shadow-lg w-48 py-3 flex-col gap-3"
+        >
+          <a
+            href="index.html"
+            class="block px-4 py-2 hover:bg-gray-600 text-white"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block px-4 py-2 hover:bg-gray-600 text-white"
+            >About me</a
+          >
+          <a
+            href="resume.html"
+            class="block px-4 py-2 hover:bg-gray-600 text-white"
+            >Resume</a
+          >
+          <a
+            href="contact.html"
+            class="block px-4 py-2 hover:bg-gray-600 text-white"
+            >Contact</a
+          >
+        </div>
+
+        <!-- JavaScript สำหรับเปิด-ปิดเมนู -->
+        <script>
+          const menuBtn = document.getElementById("menu-btn");
+          const mobileMenu = document.getElementById("mobile-menu");
+
+          menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        </script>
+      </div>
+    </div>
+
+    <!-- แนะนำตัว -->
+    <div class="flex flex-col md:flex-row items-center justify-between p-10">
+      <div class="ml-5 md:w-3/5 md:pr-5">
+        <h2 class="text-4xl font-bold">
+          <span class="flex gap-2 text-green-400"
+            >Hello<svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-8"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </h2>
+        <h2 class="text-3xl font-bold">
+          <span class="text-purple-400">I'm</span>
+          <span class="text-pink-400">Minnie !</span>
+        </h2>
+        <p class="text-gray-400 mt-4">
+          My name is Bantita Undergraduate students | Information Technology
+          major | Faculty industrial science and technology.
+        </p>
+      </div>
+      <div class="md:w-2/5 md:pl-5 mt-6 md:mt-0">
+        <img
+          src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEWULVqNWKo2RdMwcyujzzZCjADZEQFb3E5lIV8DUAGS5YTZJMxWPfEyX802LDgAbTRPImfECs3UkK%2Bi0I4WoJEzucstizpC90hkNXWZxrDGEJlLQk6QeAXVomxGV2DytbtYGY8zK22aXpNo1X71U4oJ5DKgTZv%2BhFdASf2oWKJXY8lx7Ac4yKi%2BqqCw2eaMxiQMANRSZcsU%2FLaNjjmERAXDRKc4WYW88hqlUcVPgM0aZ%2Bb3ksscyAmZQIWmplkIxNrBvxJq8hvvRcGhjev8EBwIs%2BaAkRKL8nzphpRRDwoYMR6qcAklHbockOcb8DTFdnBVxvv27N8ZE4qnfiGs0GhrbQ%2F%2FXgibG%2FE8l%2FRg%2Fcl4bMH3q%2FgC%2FNvPs1ogopvXGEIjjURlRSiN%2BHinhgczoq5nl28pYvfJavMCajWL0NzpThDPplr9QZ40tGG6awmUMkjAev6Zrt3Kc95w2WKYMaWfkW7F320677s7yXJfq0Ya3RLhBecypXHiACgBUXGsFnq6rpbZaZCLSbw6XKCq726qRZRhwysi2EiXC0DFfvNOypmx%2FFyaavWb5AzeOFrkfX%2FJvnGGNAH5GAo37qzJIaIdga0H9ZPoivS673AH6NUo3iY4fG4qIbhu6N67tfyAozvVhTzJ&allow_caching=true&sz=s330-c"
+          alt="Profile Picture"
+          class="hidden md:flex lg:flex w-full object-cover shadow-lg h-68 rounded-lg"
+        />
+      </div>
+    </div>
+
+    <!-- แบบฝึกหัด -->
+    <div class="px-16 py-16 bg-gray-800 rounded-lg mx-6">
+      <h3 class="text-3xl font-bold text-center">
+        Classroom <span class="text-green-400">Exercises. </span
+        ><span class="text-yellow-400">Projects</span>
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        <a href="src/work/ex1_menu.html" class="group block">
+          <div
+            class="bg-white rounded-lg shadow-lg transition-transform transform group-hover:-translate-y-2 group-hover:shadow-2xl"
+          >
+            <img
+              src="https://i.pinimg.com/736x/d9/d7/bd/d9d7bd5c1fc2df1285ab51deb39f747f.jpg"
+              alt="Basic HTML"
+              class="w-full h-56 object-cover rounded-t-lg"
+            />
+            <h4 class="text-xl text-black font-semibold p-5">Basic HTML</h4>
+          </div>
+        </a>
+
+        <a href="/src/work/ex2_form.html" class="group block">
+          <div
+            class="bg-white rounded-lg shadow-lg transition-transform transform group-hover:-translate-y-2 group-hover:shadow-2xl"
+          >
+            <img
+              src="https://images.pexels.com/photos/48195/document-agreement-documents-sign-48195.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              alt="Registration Form"
+              class="w-full h-56 object-cover rounded-t-lg"
+            />
+            <h4 class="text-xl text-black font-semibold p-5">
+              Registration Form
+            </h4>
+          </div>
+        </a>
+
+        <a href="/src/work/ex3_box_model.html" class="group block">
+          <div
+            class="bg-white rounded-lg shadow-lg transition-transform transform group-hover:-translate-y-2 group-hover:shadow-2xl"
+          >
+            <img
+              src="https://images.pexels.com/photos/210764/pexels-photo-210764.jpeg?auto=compress&cs=tinysrgb&w=400"
+              alt="Box Model"
+              class="w-full h-56 object-cover rounded-t-lg"
+            />
+            <h4 class="text-xl text-black font-semibold p-5">Box Model</h4>
+          </div>
+        </a>
+
+        <a href="/src/work/ex4_menu.html" class="group block">
+          <div
+            class="bg-white rounded-lg shadow-lg transition-transform transform group-hover:-translate-y-2 group-hover:shadow-2xl"
+          >
+            <img
+              src="https://i.pinimg.com/736x/1f/8b/d3/1f8bd3bdba66fb31d9bb6bc1d37a7242.jpg"
+              alt="Menu Page"
+              class="w-full h-56 object-cover rounded-t-lg"
+            />
+            <h4 class="text-xl text-black font-semibold p-5">Menu Page</h4>
+          </div>
+        </a>
+        <a href="/src/work/clonning.html" class="group block">
+          <div
+            class="bg-white rounded-lg shadow-lg transition-transform transform group-hover:-translate-y-2 group-hover:shadow-2xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2l0eXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="Menu Page"
+              class="w-full h-56 object-cover rounded-t-lg"
+            />
+            <h4 class="text-xl text-black font-semibold p-5">
+              Cloning Website
+            </h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 text-center p-2 mt-10">
+      <div class="container mx-auto">
+        <p class="text-sm">© 2025 Bantita Noinin.</p>
+      </div>
+    </footer>
+  </body>
+</html>

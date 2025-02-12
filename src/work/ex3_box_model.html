@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Analog Specialists</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 112px 112px 112px 112px;
+        padding: 0;
+        text-align: center;
+        border: 4px double;
+      }
+      header {
+        padding: 20px 0;
+      }
+      /* ส่วนของชื่อ */
+      .small-text {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: black;
+        text-transform: uppercase;
+      }
+
+      .large-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: black;
+        text-transform: uppercase;
+        position: relative;
+      }
+      .sub-text {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: black;
+        text-transform: uppercase;
+      }
+      /* ส่วนของลิ้งค์ */
+      nav {
+        margin: 20px 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        margin: 0 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: red;
+      }
+      .separator {
+        width: 82%; /* ทำให้เส้นคั่นกว้างเต็มพื้นที่ */
+        height: 2px;
+        background-color: black;
+        margin: 10px auto;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        margin: 0 112px 0 112px;
+        padding: 0;
+      }
+
+      .content img {
+        height: auto;
+        width: 100%;
+        margin: 10px auto;
+        border: none;
+      }
+
+      footer {
+        margin: 20px auto;
+        font-size: 1em;
+        color: gray;
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="text-container">
+        <div class="small-text">THE</div>
+        <div class="large-text">ANALOG</div>
+        <div class="sub-text">SPECIALISTS</div>
+      </div>
+      <div class="separator"></div>
+      <nav>
+        <a href="#">HOME</a>
+        <a href="#">FOR SALE</a>
+        <a href="#">REPAIRS</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+      </nav>
+      <div class="separator"></div>
+    </header>
+
+    <section class="content">
+      <img src="/src/images/pic13.png" alt="pic13" />
+    </section>
+
+    <footer>
+      <p>
+        We specialize in the sale and repair of classic keyboards, in particular
+        the Fender Rhodes, Wurlitzer EP200, and Hohner Clavinet.
+      </p>
+    </footer>
+  </body>
+</html>
